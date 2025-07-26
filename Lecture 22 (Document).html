@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title> Document</title>
+    <style>
+        /* CSS Position: absolute,static(default),relative,fixed,sticky,absolute */
+        .container{
+            border: 2px solid black;
+            background-color: aquamarine;
+            height: 3444px;
+        }
+        .box{
+            display: inline-block;
+            border: 2px solid red;
+            width: 150px;
+            height: 150px;
+            margin: 2px;
+        }
+        #box3{
+            color: black;
+             /*absolute: position the element relative to he position of its 1st parent 
+             position: absolute; 
+
+             relative: position the elementrelative to its normal position & will leave a gap at its normal position
+             position: relative; 
+           
+             fixed: position relative to browser window 
+             position: fixed; 
+
+             sticky 
+            position: sticky; 
+             top: 3px; 
+
+             right: 4px;
+            bottom: 2px;  
+            left: 134px;
+            top: 34px; */
+        }
+        </style>
+    </head>
+        <body>
+            <div class="container">
+            <div class="box" id="box1">1</div>
+            <div class="box" id="box2">2</div>
+            <div class="box" id="box3">3</div>
+            <div class="box" id="box4">4</div>
+            </div>
+        </body>
+        </html>
