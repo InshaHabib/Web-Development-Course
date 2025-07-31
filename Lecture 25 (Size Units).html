@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title> Size Units </title
+    <style>
+        html{
+            font-size: 25px;
+        }
+        .container{
+            /* width: 400px; */
+            /* height: 344px; */
+            height: 100vh;   /* full page height */
+            width: 100vw;    /* full page width */
+            font-size: 10px;
+            border: 2px solid red;
+        }
+        h1{
+            text-align: center;
+            /* font-size: 2em; */
+        }
+        #first{
+            /* em: font size which depend on parent */
+            /* font-size: 4em;
+            padding: 3em;  3em means 3*30 */
+        }
+        #second{
+            /* rem: full page font-size are same */
+            /* font-size: 4rem;
+            padding: 3rem;  3rem means 3*25(html font-size)=75 */
+        }
+    </style>
+    </head>
+    <body>
+<div class="container">
+    <h1 id="first"> This is First Heading </h1>
+    <h1 id="second"> This is Second Heading </h1>
+    <h1 id="third"> This is Third Heading </h1>
+</div>
+    </body>
+    </html>
