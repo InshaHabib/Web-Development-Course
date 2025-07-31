@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>Scope, If-else Conditionals & Switch Case in JavaScript</title>
+    <script src=""></script>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>item-1</li>
+            <li>item-2</li>
+            <li>item-3</li>
+            <li>item-4</li>
+            <li>item-5</li>
+            <li>item-6</li>
+            <li>item-7</li>
+        </ul>
+    </div>
+
+    <script>
+        var string1 = "This is a string1";
+        var string1 = "This is a string2";
+        console.log(string1);
+
+        // let is better alternative. (let (variable) is used in var place)
+        // let a = "6u";       Error 
+        let aa = "u";
+        {
+            let aa = "u6";
+            console.log(aa);
+        }
+        console.log(aa);
+
+        const a = "This cannot be Change";    // constant cannot be change 
+        // a = "I want to change this. This cannot be change"
+        console.log(a);
+
+        // if-else conditionals
+        let age = 34;
+        if(age>18){
+            console.log("You can drink water");
+        }
+        else if(age==2){
+            console.log("Age is 2");
+        }
+        else if(age==8){
+            console.log("Age is 8");
+        }
+        else{
+            console.log("You can drink cold drink");
+        }
+
+        // Switch-cases
+        const cups = 4;
+        // cups = 56;    Error
+        switch (cups) {
+            case 4:
+                console.log("The value of cups is 4");
+                break;
+            case 41:
+                console.log("The value of cups is 41");
+                break;
+            case 50:
+                console.log("The value of cups is 50");
+                break;
+            case 70:
+                console.log("The value of cups is 70");
+                break;
+            default:
+                console.log("The value of cups is none of 4,41,50,70");
+                break;
+        }
+
+    </script>
+</body>
+
+</html>
