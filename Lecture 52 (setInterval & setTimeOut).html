@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>setInterval & setTimeOut</title>
+</head>
+
+<body>
+    <div id="main" class="container">
+        Time now is <span id="time"></span>
+        <ul id="nav">
+            <li>Home</li>
+            <li>AboutUs</li>
+            <li>ContactUs</li>
+            <li>Services</li>
+            <li>Add to Cart</li>
+        </ul>
+    </div>
+    <script>
+        console.log("This is tutorial 58");
+        // setTimeout -- Allows us to run the function once after the interval of time
+        // clearTimeout -- Allows us to run the function repeatedly after the interval of time
+
+        // settimeout method 
+        function greet(name, byeText) {
+            console.log("Hello Good Morning " + name + " " + byeText);
+        }
+        greet();
+        // setTimeout(greet, 5000, "insha", "Take Care");
+        // timeOut = setTimeout(greet, 5000, "insha", "Take Care");
+        // console.log(timeOut);
+        // clearTimeout(timeOut);
+
+        // settimeout method -- wrong as it is callimg the function inside settimeout
+        // setTimeout(greet(), 50000);
+
+
+        setInterval(greet, 1000, "insha", "Good Night");
+
+        // intervalId = setInterval(greet, 1000, "insha", "Good Night");
+        // clearInterval(intervalId);
+
+        function displayTime() {
+            time = new Date();
+            console.log(time);
+            document.getElementById('time').innerHTML = time;
+        }
+        setInterval(displayTime, 1000);
+
+    </script>
+</body>
+</html>

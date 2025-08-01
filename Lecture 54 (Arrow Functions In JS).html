@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>Arrow Functions In JavaScript</title>
+</head>
+
+<body>
+    <div id="main" class="container">
+        This is Arrow Functions In JavaScript
+    </div>
+
+    <script>
+
+        // function greet(){
+        //     console.log("GooD Morning");
+        // }
+        // greet();
+        
+        // Arrow Function -- for shortcut
+        // let greet = ()=> {
+        //  console.log('GooD Morning');
+        // }
+
+        let greet = () => console.log('GooD Morning');
+
+        // let sum = (a, b)=>{
+        //     return a+b;
+        // };
+
+        let sum = (a, b)=> a+b;    // shortcut
+        let half = a => a/2;    // shortcut
+        
+        greet();
+
+        setTimeout(() =>{
+            console.log("We are inside settimeout");
+        }, 3000)
+
+        let obj1={
+            greeting : "GooD Morning",
+            names: ["mishal", "nazia", "insha", "sharjeel"],
+            speak(){
+                this.names.forEach((student) => {
+                    console.log(this.greeting + " Hello Student " + student);
+                });
+
+                // Undefined because 'this' cannot used outside 'this' values 
+                // this.names.forEach( function f (student) {
+                //     console.log(this.greeting + " Hello Student " + student);
+                // });
+            }
+        }
+        obj1.speak();
+    </script>
+</body>
+
+</html>
