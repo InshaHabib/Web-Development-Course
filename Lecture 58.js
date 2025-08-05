@@ -1,0 +1,73 @@
+// console.log("Hello World");
+
+const http = require('http');      // used modules
+const hostname = '127.0.0.1';
+const port = 3000;
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/HTML');
+  res.end(`<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie-edge">
+      <title> Pseudo selectors and designing</title>
+      <style>
+      .container{
+          font-family: 'Times New Roman', Times, serif;
+          border: 2px solid red;
+          background-color: aquamarine;
+          padding: 34px;
+          margin: 34px auto;
+          width: 666px;
+      }
+      .btn{
+          font-family: 'Times New Roman', Times, serif;
+          /* font-weight: bold; */
+          background-color: rgb(245, 245, 35);
+          padding: 6px;
+          border: none;
+          cursor: pointer;
+          font-size: 14px;
+          border-radius: 4px;
+      }
+      a{
+          text-decoration: none;
+          color: black;
+  
+      }
+      a:hover{
+          color: blue;
+      background-color: rgb(216, 216, 23);    
+      }
+      a:visited{
+         background-color: rgb(212, 247, 16);
+      }
+      a:active{
+          background-color: rgb(226, 21, 21);
+      }
+      .btn:hover{
+          color: darkgoldenrod;
+          background-color: rgb(226, 61, 61);
+          border: 2px solid black;
+      }
+      </style>
+      </head>
+      <body>
+          <div class="container" id="cont1">
+              <h3>Lorem ipsum dolor sit amet consectetur</h3>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus neque a adipisci voluptatum, cum repudiandae placeat iusto vel consectetur ea maxime maiores, impedit saepe reprehenderit. Possimus earum nobis atque veritatis eum. Nisi est rerum ipsa optio quidem provident assumenda officiis!</p>
+          <a href="https:google.com" class="btn">Read more</a>
+          <button class="btn">Contact us</button>
+          </div>
+      </body>
+      </html>`);
+  // res.end('Hello World This is insha');
+
+});
+
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
